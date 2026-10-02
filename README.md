@@ -1,19 +1,15 @@
-# Grace Community Church website
+# Christ Beloved Evangelical Ministry website
 
-A static, dependency-free church website (HTML/CSS/JS). Placeholder content throughout — replace "Grace Community Church", address, times, and email with your own.
+Static, dependency-free site (HTML/CSS/JS). Content and page structure come from the ministry's existing site draft.
+
+## Pages
+`index.html` · `about.html` · `operation-cms.html` · `watch.html` · `events.html` · `prayer.html` · `testimonies.html` · `contact.html`
 
 ## Run locally
-    python3 -m http.server 8000   # then open http://localhost:8000
+    python3 -m http.server 8000   # http://localhost:8000
 
-## Structure
-- `index.html`, `about.html`, `ministries.html`, `events.html`, `sermons.html`, `give.html`, `contact.html`
-- `css/style.css` — theme colors are variables at the top (light/dark aware)
-- `js/main.js` — mobile menu, active link, contact form (currently opens a mailto)
-
-## Deploy
-Any static host works: GitHub Pages, Netlify, Cloudflare Pages, Vercel.
-
-## To do before launch
-- Real logo, photos, staff, beliefs, and history
-- Sermon video embeds and a giving-provider link
-- Hook the contact form to Formspree/Netlify Forms
+## Things to know
+- **Forms (prayer, testimony, contact) do not send anywhere yet.** They only show a thank-you message. Connect them to Formspree, Netlify Forms or your own endpoint in `js/main.js` before launch, otherwise requests are lost.
+- The Operation C.M.S date (28–30 Oct 2026) drives the countdown in `js/main.js`; update `START`/`END` and the text on `index.html`, `operation-cms.html`, `events.html` each quarter.
+- The Watch TV page embeds the YouTube channel's uploads playlist (works when served over http/https, not from a `file://` path).
+- Photos and logo are in `img/`.
